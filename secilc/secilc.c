@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 	int target = SEPOL_TARGET_SELINUX;
 	int mls = -1;
 	int disable_dontaudit = 0;
-	int multiple_decls = 0;
+	int multiple_decls = 1;
 	int disable_neverallow = 0;
 	int preserve_tunables = 0;
 	int handle_unknown = -1;
@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	int opt_index = 0;
 	char *fc_buf = NULL;
 	size_t fc_size;
-	enum cil_log_level log_level = CIL_ERR;
+	enum cil_log_level log_level = CIL_WARN;
 	static struct option long_opts[] = {
 		{"help", no_argument, 0, 'h'},
 		{"verbose", no_argument, 0, 'v'},
